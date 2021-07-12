@@ -14,6 +14,8 @@ import Article from "./Article";
 
 import RefTest from "./RefTest";
 
+import ESRclass from "./EvenetStateRefClass";
+
 function App() {
   return (
     <div>
@@ -30,6 +32,7 @@ function App() {
       <Article></Article>
       <br />
       <hr />
+      <ESRclass></ESRclass>
       {/* <Article2></Article2> */}
     </div>
   );
