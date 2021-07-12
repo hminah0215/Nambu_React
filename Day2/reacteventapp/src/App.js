@@ -12,6 +12,8 @@ import "./App.css";
 import Article from "./Article";
 // import Article2 from "./Article2";
 
+import RefTest from "./RefTest";
+
 function App() {
   return (
     <div>
@@ -22,7 +24,9 @@ function App() {
       <ListDemo></ListDemo> */}
       {/* <ListDemo2></ListDemo2> */}
       {/* <Board></Board> */}
-
+      <RefTest></RefTest>
+      <br />
+      <hr />
       <Article></Article>
       <br />
       <hr />

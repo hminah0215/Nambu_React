@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 
 const Article = () => {
   // STEP 1. 데이터 구조를 정의하고 초기화한다.
@@ -20,6 +20,10 @@ const Article = () => {
   // 데이터 저장 모드
   const [saveMode, setSaveMode] = useState("C");
 
+  // 글 제목 입력상자 HTML DOM 제어용 Ref 참조변수 추가
+  const titleRef = useRef();
+
+  // ==========================================================================================
   const onArticleChange = (e) => {
     setArticle({ ...article, [e.target.name]: e.target.value });
   };
@@ -31,6 +35,10 @@ const Article = () => {
     setSaveMode("M");
     // 선택한 게시글을 기본 게시글로 설정
     setArticle(item);
+
+    // ref 참조를 통해 선택한 게시글의 제목에 포커싱설정
+    // titleRef.currens는 html dom ref 요소를 말한다.
+    titleRef.current.focus();
   };
 
   const onSave = () => {
@@ -66,6 +74,7 @@ const Article = () => {
       )
     );
   };
+
   const onDelete = () => {
     if (window.confirm("정말로 삭제하시겠습니까?")) {
       const filteredList = articleList.filter((item) => item.idx !== article.idx);
@@ -85,6 +94,7 @@ const Article = () => {
       setSaveMode("C");
     }
   };
+
   return (
     <div>
       {/* STEP 2. 화면을 구성한다. */}
@@ -102,6 +112,7 @@ const Article = () => {
                   value={article.title}
                   style={{ width: "100%" }}
                   onChange={(e) => onArticleChange(e)}
+                  ref={titleRef}
                 />
               </td>
             </tr>
