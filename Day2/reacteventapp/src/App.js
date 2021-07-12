@@ -12,9 +12,11 @@ import "./App.css";
 import Article from "./Article";
 // import Article2 from "./Article2";
 
-import RefTest from "./RefTest";
+// import RefTest from "./RefTest";
 
 import ESRclass from "./EvenetStateRefClass";
+
+import LifeCycleClass from "./LifeCycleClass";
 
 function App() {
   return (
@@ -26,14 +28,15 @@ function App() {
       <ListDemo></ListDemo> */}
       {/* <ListDemo2></ListDemo2> */}
       {/* <Board></Board> */}
-      <RefTest></RefTest>
-      <br />
-      <hr />
+      {/* <RefTest></RefTest> */}
+
+      {/* <hr /> */}
       <Article></Article>
-      <br />
-      <hr />
+
+      {/* <hr /> */}
       <ESRclass></ESRclass>
       {/* <Article2></Article2> */}
+      <LifeCycleClass></LifeCycleClass>
     </div>
   );
 }
