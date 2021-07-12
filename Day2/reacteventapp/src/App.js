@@ -9,14 +9,16 @@ import "./App.css";
 
 // import Board from "./Board";
 
-import Article from "./Article";
+// import Article from "./Article";
 // import Article2 from "./Article2";
 
 // import RefTest from "./RefTest";
 
-import ESRclass from "./EvenetStateRefClass";
+// import ESRclass from "./EvenetStateRefClass";
 
-import LifeCycleClass from "./LifeCycleClass";
+// import LifeCycleClass from "./LifeCycleClass";
+
+import UseEffectSample from "./UseEffectSample";
 
 function App() {
   return (
@@ -31,12 +33,13 @@ function App() {
       {/* <RefTest></RefTest> */}
 
       {/* <hr /> */}
-      <Article></Article>
+      {/* <Article></Article> */}
 
       {/* <hr /> */}
-      <ESRclass></ESRclass>
+      {/* <ESRclass></ESRclass> */}
       {/* <Article2></Article2> */}
-      <LifeCycleClass></LifeCycleClass>
+      {/* <LifeCycleClass></LifeCycleClass> */}
+      <UseEffectSample></UseEffectSample>
     </div>
   );
 }
