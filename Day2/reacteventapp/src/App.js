@@ -9,7 +9,7 @@ import "./App.css";
 
 // import Board from "./Board";
 
-// import Article from "./Article";
+import Article from "./Article";
 // import Article2 from "./Article2";
 
 // import RefTest from "./RefTest";
@@ -18,7 +18,7 @@ import "./App.css";
 
 // import LifeCycleClass from "./LifeCycleClass";
 
-import UseEffectSample from "./UseEffectSample";
+// import UseEffectSample from "./UseEffectSample";
 
 function App() {
   return (
@@ -33,13 +33,13 @@ function App() {
       {/* <RefTest></RefTest> */}
 
       {/* <hr /> */}
-      {/* <Article></Article> */}
+      <Article></Article>
 
       {/* <hr /> */}
       {/* <ESRclass></ESRclass> */}
       {/* <Article2></Article2> */}
       {/* <LifeCycleClass></LifeCycleClass> */}
-      <UseEffectSample></UseEffectSample>
+      {/* <UseEffectSample></UseEffectSample> */}
     </div>
   );
 }

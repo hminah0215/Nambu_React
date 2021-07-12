@@ -1,4 +1,7 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
+
+// ajax 라이브러리 axios 패키지를 참조한다.
+import axios from "axios";
 
 const Article = () => {
   // STEP 1. 데이터 구조를 정의하고 초기화한다.
@@ -19,6 +22,24 @@ const Article = () => {
 
   // 데이터 저장 모드
   const [saveMode, setSaveMode] = useState("C");
+
+  // 컴포넌트가 최초 한 번 호출될 때 백엔드에서 게시글 데이터목록 가져오기 구현
+  useEffect(() => {
+    const apiUrl = "http://edu.msoftware.co.kr/api/articles";
+
+    axios
+      .get(apiUrl)
+      .then((res) => {
+        console.log("axios call data: ", res.data);
+
+        // 게시글 목록 데이터 목록 바인딩
+        setArticleList(res.data);
+      })
+      .catch((err) => {
+        alert("에러발생");
+        console.log(err);
+      });
+  }, []);
 
   // 글 제목 입력상자 HTML DOM 제어용 Ref 참조변수 추가
   const titleRef = useRef();
@@ -178,13 +199,20 @@ const Article = () => {
           <tbody>
             {articleList.map((item, i) => (
               <tr key={item.idx}>
-                <td>{item.idx}</td>
+                {/* <td>{item.idx}</td>
                 <td>{item.title}</td>
                 <td>{item.contents}</td>
                 <td>{item.viewcount}</td>
                 <td>{item.isdisplay}</td>
                 <td>{item.writer}</td>
-                <td>{item.registdate}</td>
+                <td>{item.registdate}</td> */}
+                <td>{item.AtricleIdx}</td>
+                <td>{item.Title}</td>
+                <td>{item.Contents}</td>
+                <td>{item.ViewCount}</td>
+                <td>{item.IsDisplayYN}</td>
+                <td>{item.RegistUserID}</td>
+                <td>{item.RegistDate}</td>
                 <td>
                   <button onClick={() => onSelectItem(i, item, item.idx)}>선택</button>
                 </td>
