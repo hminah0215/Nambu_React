@@ -3,12 +3,12 @@ import React, { Component } from "react";
 class EvenetStateRefClass extends Component {
   // Step1. state를 통해 데이터 구조를 정의하고 초기값을 설정한다.
   // 하나의 state안에 해당 컴포넌트내의 모든 데이터 구조를 표현한다.
-  state = { userid: "", username: "", telephone: "" };
+  state = { user: { userid: "", username: "", telephone: "" }, userList: [] };
 
   // 클래스형에서는 const 없이 함수 처리기 기능 구현
   onUserChange = (e) => {
     // 클래스형 컴포넌트에서는 setState 세터함수 하나만을 이용해서 정보를 갱신한다.
-    this.setState({ [e.target.name]: e.target.value });
+    this.setState((state) => ({ user: { ...state.user, [e.target.name]: e.target.value } }));
   };
 
   // 저장버튼
@@ -33,7 +33,7 @@ class EvenetStateRefClass extends Component {
           ref={this.useridRef}
           type="text"
           name="userid"
-          value={this.state.userid}
+          value={this.state.user.userid}
           onChange={this.onUserChange}
         />
         <br />
@@ -45,7 +45,7 @@ class EvenetStateRefClass extends Component {
           }}
           type="text"
           name="username"
-          value={this.state.username}
+          value={this.state.user.username}
           onChange={this.onUserChange}
         />
         <br />
@@ -53,7 +53,7 @@ class EvenetStateRefClass extends Component {
         <input
           type="text"
           name="telephone"
-          value={this.state.telephone}
+          value={this.state.user.telephone}
           onChange={this.onUserChange}
         />
         <br />
