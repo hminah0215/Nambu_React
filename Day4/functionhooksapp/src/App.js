@@ -1,14 +1,16 @@
 import "./App.css";
 // import UseStateHook from "./UseStateHook";
 // import UseEffectHook from "./UseEffectHook";
-import UseReducerHook from "./UseReducerHook";
+// import UseReducerHook from "./UseReducerHook";
+import UseMemoHook from "./UseMemoHook";
 
 function App() {
   return (
     <div>
       {/* <UseStateHook></UseStateHook> */}
       {/* <UseEffectHook></UseEffectHook> */}
-      <UseReducerHook></UseReducerHook>
+      {/* <UseReducerHook></UseReducerHook> */}
+      <UseMemoHook></UseMemoHook>
     </div>
   );
 }
