@@ -2,7 +2,8 @@ import "./App.css";
 // import UseStateHook from "./UseStateHook";
 // import UseEffectHook from "./UseEffectHook";
 // import UseReducerHook from "./UseReducerHook";
-import UseMemoHook from "./UseMemoHook";
+// import UseMemoHook from "./UseMemoHook";
+import UseCallbackHook from "./UseCallbackHook";
 
 function App() {
   return (
@@ -10,7 +11,8 @@ function App() {
       {/* <UseStateHook></UseStateHook> */}
       {/* <UseEffectHook></UseEffectHook> */}
       {/* <UseReducerHook></UseReducerHook> */}
-      <UseMemoHook></UseMemoHook>
+      {/* <UseMemoHook></UseMemoHook> */}
+      <UseCallbackHook></UseCallbackHook>
     </div>
   );
 }

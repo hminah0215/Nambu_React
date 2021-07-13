@@ -41,3 +41,10 @@
 ## ✅ Day 4
 
 (0713 화요일)
+
+- 함수형 컴포넌트에서 다양한 hooks 사용해보기!
+- useState
+- useEffect
+- useReducer
+- useMemo
+- useCallback
