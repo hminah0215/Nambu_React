@@ -6,6 +6,7 @@ import { Route, Link } from "react-router-dom";
 import Home from "./Home";
 import About from "./About";
 import Profile from "./Profile";
+import Profiles from "./Profiles";
 
 function App() {
   return (
@@ -41,6 +42,9 @@ function App() {
 
       {/* URL주소에 포함시켜 전달할 파라메터 값에 대해 와일드카드로 파라메터명을 명시한다. */}
       <Route path="/profile/:username" component={Profile}></Route>
+
+      {/* 서브라우팅 에제 컴포넌트  */}
+      <Route path="/profiles" component={Profiles}></Route>
     </div>
   );
 }
