@@ -27,4 +27,5 @@ const WithRouterSample = ({ location, match, history }) => {
   );
 };
 
+// useHistory 를 사용하면 이렇게 감싸주지 않아도 괜찮음
 export default withRouter(WithRouterSample);

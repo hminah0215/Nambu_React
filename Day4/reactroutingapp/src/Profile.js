@@ -1,5 +1,8 @@
 import React from "react";
 
+// UseHistoryHook.js 참조
+import UseHistoryHook from "./UseHistoryHook";
+
 // 전역 데이터 목록 정의
 const data = {
   user1: {
@@ -33,6 +36,8 @@ const Profile = ({ match }) => {
       </h3>
 
       <p>{profile.description}</p>
+
+      <UseHistoryHook></UseHistoryHook>
     </div>
   );
 };

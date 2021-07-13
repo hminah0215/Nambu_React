@@ -5,8 +5,10 @@ import { Route, Link } from "react-router-dom";
 
 import Home from "./Home";
 import About from "./About";
+
 import Profile from "./Profile";
 import Profiles from "./Profiles";
+import About2 from "./About2";
 
 function App() {
   return (
@@ -25,6 +27,10 @@ function App() {
         <li>
           {/* profile 라우팅주소에 user1 이라는 파라메터 전달  */}
           <Link to="/profile/user1">회원소개</Link>
+        </li>
+
+        <li>
+          <Link to="/about2?detail=true&qid=xxxx">회사소개</Link>
         </li>
       </ul>
       <hr />
@@ -45,6 +51,9 @@ function App() {
 
       {/* 서브라우팅 에제 컴포넌트  */}
       <Route path="/profiles" component={Profiles}></Route>
+
+      {/* useLocation 사용한 about2 */}
+      <Route path="/about2" component={About2}></Route>
     </div>
   );
 }
