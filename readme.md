@@ -42,9 +42,8 @@
 
 (0713 화요일)
 
-- 함수형 컴포넌트에서 다양한 hooks 사용해보기!
-- useState
-- useEffect
-- useReducer
-- useMemo
-- useCallback
+- `functionhooksapp` 함수형 컴포넌트에서 다양한 hooks 사용해보기!
+
+  > useState / useEffect / useReducer / useMemo / useCallback / useRef
+
+- `reactroutingapp` 리액트(주소/메뉴(컴포넌트)) 라우팅
