@@ -5,7 +5,7 @@ import { Link, useHistory } from "react-router-dom";
 
 import axios from "axios"; // axios 패키지 참조
 
-const ArticleList = (match) => {
+const ArticleList = () => {
   // history 상수 정의
   const history = useHistory();
 

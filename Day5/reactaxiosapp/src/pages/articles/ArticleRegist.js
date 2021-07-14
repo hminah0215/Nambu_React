@@ -21,14 +21,15 @@ const ArticleRegist = () => {
     titleRef.current.focus();
   }, []);
 
+  // 입력요소와 useState간 데이터 바인딩 적용 (MVVM)
   const onChangeRegist = (e) => {
     setArticle({ ...article, [e.target.name]: e.target.value });
   };
 
   // 게시글 등록버튼
   const onSave = () => {
-    if (article.title.length === 0) {
-      alert("게시글 제목을 입력해주세요!");
+    if (article.title.length === 0 || article.contents.length === 0) {
+      alert("게시글 제목과 내용을 입력해주세요!");
       return false;
     }
 
