@@ -47,3 +47,12 @@
   > useState / useEffect / useReducer / useMemo / useCallback / useRef
 
 - `reactroutingapp` 리액트(주소/메뉴(컴포넌트)) 라우팅
+
+---
+
+## ✅ Day 5
+
+(0714 수요일)
+
+- `reactaxiosapp`
+- 백엔드 연동 데이터 관리
