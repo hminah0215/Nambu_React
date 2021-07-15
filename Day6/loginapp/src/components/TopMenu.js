@@ -10,11 +10,11 @@ const TopMenu = () => {
       </span>
       &nbsp;
       <span>
-        <Link to="/member/list">회원 목록</Link>
+        <Link to="/about">회사소개</Link>
       </span>
       &nbsp;
       <span>
-        <Link to="/member/login">로그인</Link>
+        <Link to="/login">로그인</Link>
       </span>
     </div>
   );
