@@ -6,6 +6,8 @@ import { TODO_ADD } from "../../constants/actionTypes";
 // step2) todo에서 사용할 액션의 표준화된 기본 형식을 정의한다.
 // Todo 전역 데이터 관리를 위한 todo 전용 액션 타입을 정의해서 사용!
 // payload 는 액션에서 담을 데이터의 이름을 payload로 지정한것! data나 다른걸로 해도 된다.
+
+// 리덕스 자체에서 설치와 동시에 타입스크립트 기능이 추가 되어서 그럼
 type TodoAction = { type: String, payload: {} | string };
 
 // step3) 액션 생성함수 정의

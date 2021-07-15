@@ -11,7 +11,7 @@ const INIT_STATE = {
 
 // step3) 액션의 표준화된 기본 형식을 정의한다.
 // Todo 전역 데이터 관리를 위한 todo 전용 액션 타입을 정의해서 사용!
-type TodoAction = { type: String, payload: {} | string };
+type TodoAction = { type: string, payload: {} | string };
 
 // todoCount가 비어있으면 0 또는 null값, todoList도 값이 전달안되면 빈배열을 집어넣는다는 뜻
 // 초기값 세팅 영역
@@ -33,3 +33,6 @@ const ToDo = (state: State = INIT_STATE, action: TodoAction) => {
       return { ...state };
   }
 };
+
+// Todo 리듀서 함수를 노출한다.
+export default ToDo;
