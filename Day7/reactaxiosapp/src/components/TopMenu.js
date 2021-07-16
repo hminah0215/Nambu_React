@@ -18,7 +18,7 @@ const TopMenu = () => {
       </span>
       &nbsp;
       <span>
-        <Link to="/member/login">로그인</Link>
+        <Link to="/login">로그인</Link>
       </span>
     </div>
   );

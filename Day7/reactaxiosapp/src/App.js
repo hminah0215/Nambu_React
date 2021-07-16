@@ -22,14 +22,17 @@ function App() {
     <div>
       <TopMenu></TopMenu>
 
+      {/* 메인페이지 및 게시글 관리 라우팅 규칙 정의 */}
       <Route path="/" component={Main} exact={true}></Route>
       <Route path="/article/list" component={ArticleList}></Route>
       <Route path="/article/regist" component={ArticleRegist}></Route>
       <Route path="/article/modify/:idx" component={ArticleModify}></Route>
 
+      {/* 회원정보관리 라우팅 정의 */}
       <Route path="/member/list" component={MemberList}></Route>
       <Route path="/member/regist" component={MemberRegist}></Route>
       <Route path="/member/modify/:idx" component={MemberModify}></Route>
+      <Route path="/login" component={Login}></Route>
 
       <Footer></Footer>
     </div>

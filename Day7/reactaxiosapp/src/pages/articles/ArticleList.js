@@ -22,7 +22,7 @@ const ArticleList = () => {
       .then((res) => {
         console.log("백엔드에서 제공된 전체 게시글목록 데이터 구조 파악", res);
 
-        if (res.data.code == "200") {
+        if (res.data.code === "200") {
           // 게시글 목록 세터함수를 통해 백엔드에서 전달된 json 배열을 데이터로 목록을 갱신한다.
           setArticleList(res.data.data);
         } else {

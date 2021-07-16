@@ -39,7 +39,7 @@ const ArticleRegist = () => {
       .then((result) => {
         console.log("게시글등록===>", result);
 
-        if (result.data.code == "200") {
+        if (result.data.code === "200") {
           alert("게시글 등록 성공");
           // 게시글 목록으로 돌아가기
           history.push("/article/list");

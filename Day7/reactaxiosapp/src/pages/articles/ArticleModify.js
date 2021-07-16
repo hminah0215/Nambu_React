@@ -28,9 +28,9 @@ const ArticleModify = () => {
 
     // axios get 수정할 데이터 가져오기
     axios
-      .get(url, article)
+      .get(url)
       .then((result) => {
-        console.log("게시글수정 기존게시글 정보===>", result);
+        console.log("게시글수정, 기존게시글 정보===>", result);
 
         if (result.data.code === "200") {
           // 기존 게시글의 정보가 담긴 곳

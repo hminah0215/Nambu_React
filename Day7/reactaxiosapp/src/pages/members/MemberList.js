@@ -21,7 +21,7 @@ const MemberList = () => {
         console.log("백엔드에서 제공된 전체 멤버목록 데이터 구조 파악", res);
 
         if (res.data.code === "200") {
-          // 게시글 목록 세터함수를 통해 백엔드에서 전달된 json 배열을 데이터로 목록을 갱신한다.
+          // 백엔드 회원목록 데이터 바인딩 처리
           setMemberList(res.data.data);
         } else {
           alert("백엔드 호출 에러 발생 - 회원목록");
@@ -57,7 +57,7 @@ const MemberList = () => {
         </thead>
 
         <tbody>
-          {memberList.map((item, index) => (
+          {memberList.map((item) => (
             <tr key={item.id}>
               <td>{item.id}</td>
               <td>
