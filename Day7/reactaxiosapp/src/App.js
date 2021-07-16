@@ -1,5 +1,8 @@
 import "./App.css";
 
+// react-router-dom 패키지의 BrowserRouter, index.js에 있는것을 store 참조하면서.. app.js에 참조하여 사용함
+import { BrowserRouter } from "react-router-dom";
+
 // 라우팅을위한 Router 객체를 참조한다.
 import { Route } from "react-router-dom";
 
@@ -19,23 +22,25 @@ import Login from "./pages/members/Login";
 
 function App() {
   return (
-    <div>
-      <TopMenu></TopMenu>
+    <BrowserRouter>
+      <div>
+        <TopMenu></TopMenu>
 
-      {/* 메인페이지 및 게시글 관리 라우팅 규칙 정의 */}
-      <Route path="/" component={Main} exact={true}></Route>
-      <Route path="/article/list" component={ArticleList}></Route>
-      <Route path="/article/regist" component={ArticleRegist}></Route>
-      <Route path="/article/modify/:idx" component={ArticleModify}></Route>
+        {/* 메인페이지 및 게시글 관리 라우팅 규칙 정의 */}
+        <Route path="/" component={Main} exact={true}></Route>
+        <Route path="/article/list" component={ArticleList}></Route>
+        <Route path="/article/regist" component={ArticleRegist}></Route>
+        <Route path="/article/modify/:idx" component={ArticleModify}></Route>
 
-      {/* 회원정보관리 라우팅 정의 */}
-      <Route path="/member/list" component={MemberList}></Route>
-      <Route path="/member/regist" component={MemberRegist}></Route>
-      <Route path="/member/modify/:idx" component={MemberModify}></Route>
-      <Route path="/login" component={Login}></Route>
+        {/* 회원정보관리 라우팅 정의 */}
+        <Route path="/member/list" component={MemberList}></Route>
+        <Route path="/member/regist" component={MemberRegist}></Route>
+        <Route path="/member/modify/:idx" component={MemberModify}></Route>
+        <Route path="/login" component={Login}></Route>
 
-      <Footer></Footer>
-    </div>
+        <Footer></Footer>
+      </div>
+    </BrowserRouter>
   );
 }
 
