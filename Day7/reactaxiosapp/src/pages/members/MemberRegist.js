@@ -2,8 +2,17 @@ import React, { useState } from "react";
 import axios from "axios";
 import { useHistory } from "react-router-dom";
 
+// 각종 유틸리티 함수를 참조한다.
+import { getJWTtoken, isMemberLogined, getLoginMember } from "../../helpers/authUtils";
+
 const MemberRegist = () => {
   const history = useHistory();
+
+  // 로그인 여부 체크
+  const isLogin = isMemberLogined();
+  if (isLogin == false) {
+    history.push("/login");
+  }
 
   const [member, setMember] = useState({
     email: "",

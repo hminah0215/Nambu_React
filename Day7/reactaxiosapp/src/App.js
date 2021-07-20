@@ -6,6 +6,12 @@ import { BrowserRouter } from "react-router-dom";
 // 라우팅을위한 Router 객체를 참조한다.
 import { Route } from "react-router-dom";
 
+// axios 참조
+import axios from "axios";
+
+// 리덕스 : 구독을 위한 useSelector훅을 참조한다.
+// import { useSelector } from "react-redux";
+
 // 각종 재사용 컴포넌트에 대한 참조
 import Footer from "./components/Footer";
 import TopMenu from "./components/TopMenu";
@@ -21,6 +27,13 @@ import MemberModify from "./pages/members/MemberModify";
 import Login from "./pages/members/Login";
 
 function App() {
+  //
+  // const token = useSelector((state) => state.Login.token);
+
+  // axios의 전역 기본 정보 세팅하기
+  axios.defaults.baseURL = "http://localhost:3005";
+  // axios.defaults.headers.common["Authorization"] = `Bearer ${token}`;
+
   return (
     <BrowserRouter>
       <div>

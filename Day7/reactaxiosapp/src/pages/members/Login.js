@@ -33,7 +33,17 @@ const Login = () => {
           const token = result.data.data;
           console.log("jwt토큰값", token);
 
+          // 토큰값을 웹브라우저 로컬스토리지에 보관하기
+          window.localStorage.setItem("jwttoken", token);
+          const storageToken = window.localStorage.getItem("jwttoken");
+          console.log("브라우저 로컬스토리지에 저장된 토큰:", storageToken);
+
+          // 사용자 토큰 발급 후 백엔드 api 호출시 발급된 jwt 토큰을
+          // ajax 헤더에 x-access-token 영역에 기본 포함시켜 백엔드 서비스를 호출하게 한다.
+          axios.defaults.headers.common["x-access-token"] = `${token}`;
+
           // 발급된 토큰값을 전역 데이터에 반영한다.
+          // globalDispatch(액션생성함수명(액션생성함수에 전달할 데이터))
           globalDispatch(memberLogin(token));
 
           alert("로그인 성공");
@@ -55,7 +65,7 @@ const Login = () => {
       <input type="text" name="email" value={login.email} onChange={onLoginChange}></input>
       <hr />
       <span>비밀번호</span>
-      <input type="text" name="userpwd" value={login.userpwd} onChange={onLoginChange}></input>
+      <input type="password" name="userpwd" value={login.userpwd} onChange={onLoginChange}></input>
       <hr />
       <button onClick={onLogin}>로그인</button>
     </div>

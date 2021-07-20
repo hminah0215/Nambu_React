@@ -17,8 +17,9 @@ const ArticleList = () => {
   // 게시글 목록 컴포넌트가 최초 1번 렌더링이 완료되면 백엔드에서 게시글목록 조회
   useEffect(() => {
     // 노드 프로젝트에서 게시글목록을 부르는 주소
+    // http://localhost:3005/api/articles 이라고 안써도 app.js 에서 axios.defaults.baseURL 지정해놔서 작동함
     axios
-      .get("http://localhost:3005/api/articles")
+      .get("/api/articles")
       .then((res) => {
         console.log("백엔드에서 제공된 전체 게시글목록 데이터 구조 파악", res);
 
